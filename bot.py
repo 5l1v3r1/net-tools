@@ -23,7 +23,7 @@ import json
 reload(sys)
 sys.setdefaultencoding("utf-8")
 admin = [603064758]
-TOKEN = "TOKEN"
+TOKEN = "541433480:AAGxjIDzm3LD7KOJ8951p3MbAJRy7Xm467s"
 
 def clear():
     gnu = "clear"
@@ -147,7 +147,7 @@ def whois(message):
             bot.send_message(admin, "New User ~> [{}](tg://user?id={})".format(message.from_user.first_name, message.from_user.id), parse_mode="markdown")
             print("{}{} Started the bot :d ".format(b, message.from_user.id))
         except sqlite3.IntegrityError:
-            bot.send_message(message.chat.id, "*Welcome to Pentester Bot*\n`Bot writed by iWhH `\n*Click on help .*\n iran-cyber.net", disable_notification=True, reply_markup=markup, parse_mode="markdown")
+            bot.send_message(message.chat.id, "*Welcome to Pentester Bot*\n`Bot writed by iWhH `\n*Click on help .*\n\n [ICSG](http://iran-cyber.net)", disable_notification=True, reply_markup=markup, parse_mode="markdown")
     if message.from_user.id in admin and message.text == "/stats":
         s = db.execute("SELECT count(userid) FROM robot;")
         for _ in s:
@@ -156,6 +156,7 @@ def whois(message):
 @bot.callback_query_handler(func=lambda call: True)
 def callback_inline(call):
     if call.data == "help":
-        bot.send_message(call.message.chat.id, "1- *Whois Domain*\n `/whois domain.com`\n 2- *Dns Lookup*\n `/lookup domain.com\n` 3- *Zone Transfer*\n `/zone domain.com`\n 4- *Http Headers*\n `/httpheaders domain.com`\n 5- *Ip Information*\n `/ipinfo ip address`\n 6- *Traceroute*\n `/tr domain.com`\n iran-cyber.net",parse_mode="markdown")
+        bot.send_message(call.message.chat.id, "1- *Whois Domain*\n `/whois domain.com`\n 2- *Dns Lookup*\n `/lookup domain.com\n` 3- *Zone Transfer*\n `/zone domain.com`\n 4- *Http Headers*\n `/httpheaders domain.com`\n 5- *Ip Information*\n `/ipinfo ip address`\n 6- *Traceroute*\n `/tr domain.com`\n\n [ICSG](https://iran-cyber.net)",parse_mode="markdown")
 
 bot.polling(True)
+
