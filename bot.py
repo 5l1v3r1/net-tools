@@ -24,7 +24,7 @@ execfile("config.py")
 reload(sys)
 sys.setdefaultencoding("utf-8")
 admin = [603064758]
-TOKEN = "594035852:AAFg2nqiw7a2v2YRE0tK8-Oq70rwqghxW3o"
+TOKEN = "TOKEN"
 
 def clear():
     gnu = "clear"
