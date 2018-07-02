@@ -20,7 +20,6 @@ y = Fore.YELLOW
 res = Style.RESET_ALL
 import re, requests, time
 import json
-execfile("config.py")
 reload(sys)
 sys.setdefaultencoding("utf-8")
 admin = [603064758]
