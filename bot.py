@@ -147,7 +147,7 @@ def whois(message):
             bot.send_message(admin, "New User ~> [{}](tg://user?id={})".format(message.from_user.first_name, message.from_user.id), parse_mode="markdown")
             print("{}{} Started the bot :d ".format(b, message.from_user.id))
         except sqlite3.IntegrityError:
-            bot.send_message(message.chat.id, "*Welcome to Pentester Bot*\n`Bot writed by iWhH `\n*Click on help .*\n\n [ICSG](http://iran-cyber.net)", disable_notification=True, reply_markup=markup, parse_mode="markdown")
+            bot.send_message(message.chat.id, "*Welcome to ICSG NET-TOOLS Bot*\n`Bot writed by iWhH `\n*Click on help .*\n\n [ICSG](http://iran-cyber.net)", disable_notification=True, reply_markup=markup, parse_mode="markdown")
     if message.from_user.id in admin and message.text == "/stats":
         s = db.execute("SELECT count(userid) FROM robot;")
         for _ in s:
