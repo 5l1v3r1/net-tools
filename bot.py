@@ -23,7 +23,7 @@ import json
 reload(sys)
 sys.setdefaultencoding("utf-8")
 admin = [603064758]
-TOKEN = "541433480:AAGxjIDzm3LD7KOJ8951p3MbAJRy7Xm467s"
+TOKEN = "TOKEN"
 
 def clear():
     gnu = "clear"
